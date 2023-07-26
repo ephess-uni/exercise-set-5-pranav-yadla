@@ -22,5 +22,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="to input the file")
     parser.add_argument('file_name',help="input file name",type=str,nargs='?')
     args = parser.parse_args()
-    print(args.file_name)
     main(args.file_name) if args.file_name else print('run with arguments to get output')
