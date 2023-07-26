@@ -20,6 +20,7 @@ if __name__ == "__main__":
     # To test your program with arguments, run it from the command line
     # (see README.md for more details)
     parser = argparse.ArgumentParser(description="to input the file")
-    parser.add_argument('file_name',help="input file name",type=str)
+    parser.add_argument('file_name',help="input file name",type=str,nargs='?')
     args = parser.parse_args()
-    main(args.file_name)
+    print(args.file_name)
+    main(args.file_name) if args.file_name else print('run with arguments to get output')
